@@ -1,0 +1,22 @@
+# ops-policy.pdf section 10: this data must not be published or uploaded
+# to any public repository. Drop these files in locally to run the code;
+# never commit them, even to a private fork, without checking with Kestrel.
+train.csv
+test-unlabelled.csv
+partners.csv
+products.csv
+sample-submission.csv
+ops-policy.pdf
+email-thread.txt
+README.txt
+
+# Trained model and outputs are derived from the above — same restriction
+# applies, since they encode claim-level patterns from the real data.
+# Deliver predictions.csv via the Google Drive link, not the public repo.
+model.joblib
+predictions.csv
+validation_report.txt
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

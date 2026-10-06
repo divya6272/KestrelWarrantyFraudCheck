@@ -1,0 +1,7 @@
+logistic_regression   PR-AUC 0.331 (+/-0.063)   ROC-AUC 0.840 (+/-0.064)
+gradient_boosting     PR-AUC 0.535 (+/-0.092)   ROC-AUC 0.879 (+/-0.068)
+
+Selected model: gradient_boosting
+PR-AUC (average precision) was used to pick the model, not accuracy or ROC-AUC, because fraud is 1.23% of labeled claims: ROC-AUC and accuracy both look deceptively good on this kind of imbalance, while PR-AUC tracks what the investigation desk actually needs (good scores near the top of the ranking).
+
+Distribution-shift caveat: 100% of test-unlabelled.csv is from after the 1 May 2026 auto-approval policy change, but only 13% of labeled training claims are from that period. The model has comparatively few confirmed examples of fraud patterns specific to the no-inspection regime.
